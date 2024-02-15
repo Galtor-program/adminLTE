@@ -4,7 +4,7 @@ class ControladorPlantilla{
 
 public function ctrPlantilla() {
 
-include "view/resources/plantilla.php";
+include "view/plantilla.php";
 
 }
 

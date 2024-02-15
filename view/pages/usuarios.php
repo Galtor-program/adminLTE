@@ -33,9 +33,40 @@
                                        <th>Usuario</th> 
                                        <th>Foto</th>
                                        <th>Rol</th>
-                                       <th>Acciones</th> 
+                                      <th>Acciones</th> 
                                     </tr>
                                 </thead>
+
+                                 <tbody>
+                                    <?php 
+                                    foreach ($usuarios as $key => $value) {
+                                    
+                                    ?>
+                                    <tr>
+                                        
+                                        <td><?php echo ($key+1)?></td>
+                                        <td><?php echo $value ["usuario"]?></td>
+                                        <td><?php echo $value ["nombre"]?></td> 
+                                        
+                                        <td><?php echo $value ["foto"]?></td>
+                                        
+                                        <td>    
+                                            <div class= "btn-group">
+
+                                                    <button class = "btn btn-warning btn-sm">
+                                                        <i class="fas fa-pencil-alt text-white"></i>
+                                                    </button>
+                                                    <button class = "btn btn-danger btn-sm">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+
+                                            </div>
+                                        </td>    
+                                    </tr> 
+                                    <?php 
+                                    }
+                                    ?>       
+                                 </tbody>   
                             </table>
                         </div>
                     </div>

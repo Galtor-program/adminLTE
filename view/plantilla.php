@@ -1,3 +1,16 @@
+<?php
+session_start();
+$usuarios = crtUsuarios::ctrMostrarUsuarios();
+//var_dump($usuarios);
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -32,10 +45,10 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 
-    <div class="wrapper">
+    <div>
 
-        <?php include 'view/modules/header.php'; ?>
-        <?php include 'view/modules/menu.php'; ?>
+        <?php include 'modules/header.php'; ?>
+        <?php include 'modules/menu.php'; ?>
 
         <!--Instruccion que lee el nombre que toma page -->
             <?php

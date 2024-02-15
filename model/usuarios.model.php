@@ -14,7 +14,7 @@ class mdlUsuarios{
 
        return $stmt->fetchAll();
 
-      // $stmt-> close(); 
+       $stmt-> close(); 
        $stmt = null;
 
     }

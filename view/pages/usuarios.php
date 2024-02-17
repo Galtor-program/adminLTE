@@ -47,17 +47,16 @@
                                         <td><?php echo ($key+1)?></td>
                                         <td><?php echo $value ["usuario"]?></td>
                                         <td><?php echo $value ["nombre"]?></td> 
-                                        
                                         <td><?php echo $value ["foto"]?></td>
-                                        
+                                        <td><?php echo $value ["rol"]?></td>
                                         <td>    
                                             <div class= "btn-group">
 
                                                     <button class = "btn btn-warning btn-sm">
-                                                        <i class="fas fa-pencil-alt text-white"></i>
+                                                        <i class="glyphicon glyphicon-edit text-white"></i>
                                                     </button>
                                                     <button class = "btn btn-danger btn-sm">
-                                                        <i class="fas fa-trash"></i>
+                                                        <i class="glyphicon glyphicon-trash"></i>
                                                     </button>
 
                                             </div>
@@ -90,7 +89,7 @@
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group has-feedback" bis_skin_checked="1">
-                    <input type="text" class="form-control" placeholder="nombre" name="nom_perfil">
+                    <input type="text" class="form-control" placeholder="nombre" name="nom_usuarios">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback" bis_skin_checked="1">
@@ -103,7 +102,7 @@
                 </div>
                 <div class="form-group has-feedback" bis_skin_checked="1">
                     <div class="btn btn-default btn-file" bis_skin_checked="1">
-                        <i class="fas fa-paperclip"></i> Adjuntar Imagen
+                        <i class="glyphicon glyphicon-file"></i> Adjuntar Imagen
                         <input type="file" name="uploadImg">
                     </div>
                     <img class="prevImgPerfil img-fluid py-2" width="200" height="200">
@@ -111,9 +110,13 @@
                 </div>
 
                 <!-- Arreglar roles -->
-                <div class="form-group has-feedback" bis_skin_checked="1">
-                    <input type="text" class="form-control" placeholder="Rol" name="pass_user">
-                    <span class="glyphicon glyphicon-king form-control-feedback"></span>
+                <div class="form-group has-feedback">
+                    <label>Rol</label>
+                    <select class="form-control" name="rol_user" required>
+                        <option value="1">admin</option>
+                        <option value="1">vendedor</option>            
+                    </select>
+                   
                 </div>
 
             <div class="modal-footer">
@@ -121,7 +124,10 @@
                 <button type="button" class="btn btn-primary">Guardar</button>
             </div>
 
-
+            <?php 
+                $guardarUsuarios = new crtUsuarios(); 
+                $guardarUsuarios -> ctrGuardarUsuarios();
+            ?>
 
 
             </form>

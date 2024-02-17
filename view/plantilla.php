@@ -274,6 +274,8 @@ $usuarios = crtUsuarios::ctrMostrarUsuarios();
     <script src="view/resources/dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="view/resources/dist/js/demo.js"></script>
+    <script src="view/js/usuarios.js"></script>
+    <script src="view/js/sweetalert2.all.js"></script>
     <script>
         $(document).ready(function() {
             $('.sidebar-menu').tree()
